@@ -12,7 +12,7 @@ eans = ['http://www.directtextbook.com/ourbuybacktable.php?ean=9781506094380', '
         ]
 names = {'Amazon Trade-In', 'Valore', 'Textbooks.com', 'TextbookRush', 'Textbook Recycling', 'Bookbyte'}
 user_agent = {'User-Agent': 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'}
-#with open('test.txt') as f: # open test.txt file containing the list of url
+
 for url in eans: # read every url from the list of urls named ean
     sleep(randint(5,90))   # random sleep between requests from 5 sec to 90 sec
     try:
