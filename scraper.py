@@ -10,7 +10,7 @@ names = {'Amazon Trade-In', 'Valore', 'Textbooks.com', 'TextbookRush', 'Textbook
 user_agent = {'User-Agent': 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'}
 
 with open('eans.txt') as f:
-    for url in f: # read every url from the list of urls named ean
+    for url in f: # read every url from the list of urls of the file named ean
         sleep(randint(5,90))   # random sleep between requests from 5 sec to 90 sec
         try:
            pages = unirest.get(url.strip(), headers = user_agent)  # make a request to the url
