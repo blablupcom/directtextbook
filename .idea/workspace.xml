@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="84c9e9fc-410b-4b7d-9f3c-221a17f34efb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/eans.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/setup.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib.linux-i686-2.7/directtextbook/__init__.py" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/lib.linux-i686-2.7/directtextbook/scraper.py" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scraper.py" afterPath="$PROJECT_DIR$/scraper.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook.egg-info/PKG-INFO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook.egg-info/SOURCES.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook.egg-info/dependency_links.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook.egg-info/not-zip-safe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook.egg-info/requires.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook.egg-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook/requirements.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directtextbook/scraper.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/PKG-INFO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook.egg-info/PKG-INFO" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook.egg-info/SOURCES.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook.egg-info/dependency_links.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook.egg-info/not-zip-safe" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook.egg-info/requires.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook.egg-info/top_level.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook/__init__.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/directtextbook/scraper.py" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/setup.cfg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/directtextbook-0.1/setup.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="directtextbook.iws" />

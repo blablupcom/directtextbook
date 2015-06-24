@@ -1,3 +1,0 @@
-unirest
-beautifulsoup4
-scraperwiki

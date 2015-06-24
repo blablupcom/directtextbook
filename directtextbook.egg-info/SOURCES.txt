@@ -1,9 +1,0 @@
-setup.py
-directtextbook/__init__.py
-directtextbook/scraper.py
-directtextbook.egg-info/PKG-INFO
-directtextbook.egg-info/SOURCES.txt
-directtextbook.egg-info/dependency_links.txt
-directtextbook.egg-info/not-zip-safe
-directtextbook.egg-info/requires.txt
-directtextbook.egg-info/top_level.txt
