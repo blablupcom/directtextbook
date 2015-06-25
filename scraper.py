@@ -19,7 +19,7 @@ def takeprice(name):
         try:
              price = textbook.find_next('td', attrs={'align': 'right'}).text.split('$')[-1]
         except:pass
-    return price
+    return price.strip()
 
 with open('eans.txt') as f:
     for url in f: # read every url from the list of urls of the file named ean
