@@ -1,13 +1,24 @@
-from datetime import datetime
 from bs4 import BeautifulSoup as bs
 import unirest
 import scraperwiki
 from random import randint
 from time import sleep
-import os.path
+import re
 
-names = {'Amazon Trade-In', 'Valore', 'Textbooks.com', 'TextbookRush', 'Textbook Recycling', 'Bookbyte'}
+names = ['Amazon Trade-In', 'Valore', 'Textbooks.com', 'TextbookRush', 'Textbook Recycling', 'Bookbyte']
 user_agent = {'User-Agent': 'Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)'}
+
+def takeprice(name):
+    textbook = ''
+    try:
+         textbook = soup.find( text=re.compile('{}'.format(name)))
+    except: pass
+    price = ''
+    if textbook:
+        try:
+             price = textbook.find_next('td', attrs={'align': 'right'}).text.split('$')[-1]
+        except:pass
+    return price
 
 with open('eans.txt') as f:
     for url in f: # read every url from the list of urls of the file named ean
@@ -16,18 +27,12 @@ with open('eans.txt') as f:
            pages = unirest.get(url.strip(), headers = user_agent)  # make a request to the url
         except: continue
         soup = bs(pages.raw_body)
-        vendornames = soup.find_all('a', 'vendorname')   # finding all vendors tags
-        for vendorname in vendornames:
-            ean = url.split('=')[-1]
-            name =''
-            price = ''
-            try:
-                name = vendorname.text    # getting name of vendors
-                if name in names:     # if a vendor name in the set of vendors names called names
-                    todays_date = str(datetime.now()) # fix the time
-                    try:
-                        price = vendorname.find_next('span', 'status').strong.text  # get price for this vendor
-                        print ean, name, price
-                        scraperwiki.sqlite.save(unique_keys=['date'], data={"ean": ean, "name":name, "price": price, "date": todays_date }) # save data into sql database
-                    except: pass
-            except: pass
+        ean = url.split('=')[-1]
+        price_amaz = takeprice(names[0])
+        price_val = takeprice(names[1])
+        price_txcom = takeprice(names[2])
+        price_txt = takeprice(names[3])
+        price_rec = takeprice(names[4])
+        price_bkb = takeprice(names[-1])
+
+        scraperwiki.sqlite.save(unique_keys=["ean"], data={"ean": ean.strip(), 'Amazon Trade-In': price_amaz, 'Valore': price_val, 'Textbookscom': price_txcom, 'TextbookRush':  price_txt, 'Textbook Recycling':price_rec, 'Bookbyte': price_bkb })
