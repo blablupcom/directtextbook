@@ -28,6 +28,7 @@ with open('eans.txt') as f:
         except: continue
         soup = bs(pages.raw_body)
         ean = url.split('=')[-1]
+        todays_date = str(datetime.now()) # fix the time
         price_amaz = takeprice(names[0])
         price_val = takeprice(names[1])
         price_txcom = takeprice(names[2])
@@ -35,4 +36,4 @@ with open('eans.txt') as f:
         price_rec = takeprice(names[4])
         price_bkb = takeprice(names[-1])
 
-        scraperwiki.sqlite.save(unique_keys=["ean"], data={"ean": ean.strip(), 'Amazon Trade-In': price_amaz, 'Valore': price_val, 'Textbookscom': price_txcom, 'TextbookRush':  price_txt, 'Textbook Recycling':price_rec, 'Bookbyte': price_bkb })
+        scraperwiki.sqlite.save(unique_keys=["ean"], data={"ean": ean.strip(), 'date': todays_date, 'Amazon Trade-In': price_amaz, 'Valore': price_val, 'Textbookscom': price_txcom, 'TextbookRush':  price_txt, 'Textbook Recycling':price_rec, 'Bookbyte': price_bkb })
