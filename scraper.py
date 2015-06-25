@@ -36,5 +36,5 @@ with open('eans.txt') as f:
         price_txt = takeprice(names[3])
         price_rec = takeprice(names[4])
         price_bkb = takeprice(names[-1])
-
+        print price_amaz, price_val, price_txcom, price_txt, price_rec, price_bkb
         scraperwiki.sqlite.save(unique_keys=["ean"], data={"ean": ean.strip(), 'date': todays_date, 'Amazon Trade-In': price_amaz, 'Valore': price_val, 'Textbookscom': price_txcom, 'TextbookRush':  price_txt, 'Textbook Recycling':price_rec, 'Bookbyte': price_bkb })
